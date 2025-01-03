@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HDz</title>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="" autofocus />
+    </div>
+    <div id="container">
+      <div class="buttons-container">
+        <button class="reset">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M440-122q-121-15-200.5-105.5T160-440q0-66 26-126.5T260-672l57 57q-38 34-57.5 79T240-440q0 88 56 155.5T440-202v80Zm80 0v-80q87-16 143.5-83T720-440q0-100-70-170t-170-70h-3l44 44-56 56-140-140 140-140 56 56-44 44h3q134 0 227 93t93 227q0 121-79.5 211.5T520-122Z"
+            />
+          </svg>
+        </button>
+        <button class="profile">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <main class="time-container">
+        <span class="week"></span>
+        <section class="time">
+          <span class="hrs"></span><span class="sec blink-2">:</span
+          ><span class="min"></span>
+        </section>
+        <section class="date">
+          <span class="day"></span>
+          <span class="dd"><sup>th</sup></span>
+          <span class="mm"></span>
+          <span class="yy"></span>
+        </section>
+        <!-- <section class="tithi">
+          <span class="mah">પોષ </span>
+          <span class="paksha">વદ </span>
+          <span class="divas">3</span>
+        </section> -->
+      </main>
+      <main class="weather-container">
+        <section class="weather-info">
+          <div class="weather-summary">
+            <img
+              src="assets/overcast-day.svg"
+              alt=""
+              class="weather-summary-img"
+            />
+            <div class="weather-summary-info">
+              <h1 class="temp">14 °C</h1>
+              <h3 class="condition-txt regular-txt">Clouds</h3>
+            </div>
+          </div>
+          <p class="summary"></p>
+          <div class="weather-conditions-container">
+            <div class="conditions-items">
+              <img src="assets/sunrise.svg" alt="" width="50px" />
+              <div class="condition-info">
+                <h5 class="sunrise"></h5>
+              </div>
+            </div>
+            <div class="conditions-items">
+              <img src="assets/aqi.svg" alt="" width="50px" />
+              <div class="condition-info">
+                <h5 class="aqi"></h5>
+              </div>
+            </div>
+            <div class="conditions-items">
+              <img src="assets/wind.svg" alt="" width="50px" />
+              <div class="condition-info">
+                <h5 class="windSpeed"></h5>
+              </div>
+            </div>
+          </div>
+          <div class="weather-conditions-container">
+            <div class="conditions-items">
+              <img src="assets/sunset.svg" alt="" width="50px" />
+              <div class="condition-info">
+                <h5 class="sunset"></h5>
+              </div>
+            </div>
+            <div class="conditions-items">
+              <img src="assets/humidity.svg" alt="" width="50px" />
+              <div class="condition-info">
+                <h5 class="humidity"></h5>
+              </div>
+            </div>
+            <div class="conditions-items">
+              <img src="assets/compass.svg" alt="" width="40px" />
+              <div class="condition-info">
+                <h5 class="windDeg"></h5>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="dock">
+      <a href="https://chatgpt.com/" target="_blank"
+        ><div class="licons">
+          <img src="assets/chatgpt.png" alt="" height="40px" /></div
+      ></a>
+      <a href="https://leetcode.com/" target="_blank"
+        ><div class="licons">
+          <img src="assets/leetcode.png" alt="" height="30px" /></div
+      ></a>
+      <a href="https://github.com" target="_blank"
+        ><div class="licons"><i class="fa-brands fa-github"></i></div
+      ></a>
+      <a href="https://vscode.dev/" target="_blank"
+        ><div class="licons"><i class="fa-solid fa-laptop-code"></i></div
+      ></a>
+      <a href="https://linkedin.com" target="_blank"
+        ><div class="licons"><i class="fa-brands fa-linkedin-in"></i></div
+      ></a>
+      <a href="https://my.nextdns.io/login" target="_blank"
+        ><div class="licons"><i class="fa-solid fa-shield-halved"></i></div
+      ></a>
+      <a href="https://youtube.com" target="_blank"
+        ><div class="licons"><i class="fa-brands fa-youtube"></i></div
+      ></a>
+      <a href="https://mail.google.com/" target="_blank"
+        ><div class="licons"><i class="fa-regular fa-envelope"></i></div
+      ></a>
+      <a href="https://drive.google.com/" target="_blank"
+        ><div class="licons"><i class="fa-brands fa-google-drive"></i></div
+      ></a>
+      <a href="https://docs.google.com/document/" target="_blank"
+        ><div class="licons"><i class="fa-regular fa-file-word"></i></div
+      ></a>
+      <a href="https://docs.google.com/spreadsheets/" target="_blank"
+        ><div class="licons"><i class="fa-regular fa-file-excel"></i></div
+      ></a>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/97fcb74a5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

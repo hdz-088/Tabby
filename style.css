@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*  font-family: "Quantico", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("assets/background.jpg");
+  width: 100%;
+  height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(3px);
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  font-weight: 600;
+}
+
+.weather-container {
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0, 15)
+  );
+  border-radius: 12px;
+  backdrop-filter: blur(100px);
+  padding: 20px;
+  padding-right: 30px;
+  font-family: "Poppins";
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.325);
+}
+
+.summary {
+  text-align: center;
+  font-weight: 400;
+  font-size: small;
+}
+
+/* SECTION WEATHER INFO */
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* .location-date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+} */
+
+.weather-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-summary-img {
+  width: 120px;
+  height: 120px;
+}
+
+.weather-summary-info {
+  text-align: end;
+}
+
+/* WEATHER CONDITION */
+
+.weather-conditions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conditions-items {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* DATE & TIME */
+
+.time-container {
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0, 15)
+  );
+  border-radius: 12px;
+  backdrop-filter: blur(100px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.325);
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  text-align: center;
+  font-family: "Quantico", sans-serif;
+}
+
+.blink-2 {
+  -webkit-animation: blink-2 1s ease-in-out 1s infinite both;
+  animation: blink-2 1s ease-in-out 1s infinite both;
+}
+@-webkit-keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.date {
+  font-weight: 500;
+  text-align: center;
+}
+
+.tithi {
+  font-weight: 500;
+  text-align: center;
+}
+
+/* DOCK */
+
+.buttons-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background: none;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0, 15)
+  );
+  border: none;
+  backdrop-filter: blur(100px);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.325);
+}
+
+.dock {
+  width: fit-content;
+  height: 100px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0, 15)
+  );
+  border-radius: 20px;
+  backdrop-filter: blur(100px);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.325);
+}
+
+.dock a {
+  text-decoration: none;
+}
+
+.dock .licons {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s;
+  font-size: 30px;
+}
+
+.dock .licons img {
+  transition: 0.7s;
+}
+
+.dock .licons img:hover {
+  opacity: 1;
+}
+
+.dock .licons:hover {
+  color: #f2f2f2;
+  background-color: #2b2b2b;
+  /* border: 0.5px solid #7f7f7f; */
+}
+
+/* EXP */
+
+.search-container {
+  height: fit-content;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0, 15)
+  );
+  border-radius: 20px;
+  backdrop-filter: blur(100px);
+  padding: 5px 10px;
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.325);
+  position: fixed;
+  top: -60px; /* Hidden at the top initially */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  transition: top 0.3s ease; /* Transition for sliding effect */
+  width: 400px;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  color: white;
+  font-size: larger;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.search-container input:focus {
+  outline: none;
+}
+
+.blur-bg {
+  filter: blur(5px);
+  transition: all 0.3s ease;
+}
