@@ -4,3 +4,5 @@
 </p>
 
 A personal new tab site. Contains a digital clock, weather container and a dock containing my frequently used sites
+
+<h4>Enter your own UNSPLASH and OPENWEATHER API keys to use it.</h4>
